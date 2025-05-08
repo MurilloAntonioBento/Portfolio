@@ -15,15 +15,3 @@ main.addEventListener('click', ()=>{
 })
 
 let overlay = document.getElementById('overlay-fundo')
-
-document.getElementById('baixar-curriculo').addEventListener('click', function() {
-    var linkDownload = document.createElement('a');
-    
-    linkDownload.href = 'Arquivos';
-    linkDownload.download = 'CurriculoMurilloAntonioBento.docx';
-    
-    document.body.appendChild(linkDownload);
-    
-    linkDownload.click();
-    document.body.removeChild(linkDownload);
-});
