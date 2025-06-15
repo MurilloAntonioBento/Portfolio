@@ -23,6 +23,10 @@
     box-sizing: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     background-color: #232832;
     height: 100vh;
@@ -451,28 +455,6 @@ footer .logo-footer {
 
 }
 
-@media screen and (max-width: 600px) {
-    
-    /* O formulário começa a quebrar */
-
-    .input__text #nome {
-        width: 400px;
-    }
-
-    .email-input #email {
-        width: 400px;
-    }
-
-    .telefone-input #telefone {
-        width: 400px;
-    }
-
-    .mensagem-input #mensagem {
-        width: 400px;
-    }
-
-}
-
 @media screen and (max-width: 770px) {
     
     .menu {
@@ -537,27 +519,14 @@ footer .logo-footer {
         color: #fffff0;
     }
 
+    footer .social {
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 420px) {
     
-    /* O formulário começa a quebrar para celular */
-
-    .input__text #nome {
-        width: 300px;
-    }
-
-    .email-input #email {
-        width: 300px;
-    }
-
-    .telefone-input #telefone {
-        width: 300px;
-    }
-
-    .mensagem-input #mensagem {
-        width: 300px;
-    }
 
     .topo-do-site .img-topo-site img {
         width: 300px;
@@ -616,24 +585,6 @@ footer .logo-footer {
 }
 
 @media screen and (max-width: 350px) {
-    
-    /* O formulário começa a quebrar para celular com a tela muito pequena */
-
-    .input__text #nome {
-        width: 240px;
-    }
-
-    .email-input #email {
-        width: 240px;
-    }
-
-    .telefone-input #telefone {
-        width: 240px;
-    }
-
-    .mensagem-input #mensagem {
-        width: 240px;
-    }
 
     .topo-do-site .img-topo-site img {
         width: 300px;
@@ -661,69 +612,5 @@ footer .logo-footer {
 
     .especialidades .interface h2 {
         font-size: 30px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    
-    /* O formulário começa a quebrar para celular */
-
-    .input__text #nome {
-        width: 349px;
-    }
-
-    .email-input #email {
-        width: 349px;
-    }
-
-    .telefone-input #telefone {
-        width: 349px;
-    }
-
-    .mensagem-input #mensagem {
-        width: 349px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    
-    /* O formulário começa a quebrar para celular */
-
-    .input__text #nome {
-        width: 300px;
-    }
-
-    .email-input #email {
-        width: 300px;
-    }
-
-    .telefone-input #telefone {
-        width: 300px;
-    }
-
-    .mensagem-input #mensagem {
-        width: 300px;
-    }
-}
-
-
-@media screen and (max-width: 320px) {
-    
-    /* O formulário começa a quebrar para celular */
-
-    .input__text #nome {
-        width: 250px;
-    }
-
-    .email-input #email {
-        width: 250px;
-    }
-
-    .telefone-input #telefone {
-        width: 250px;
-    }
-
-    .mensagem-input #mensagem {
-        width: 250px;
     }
 }
