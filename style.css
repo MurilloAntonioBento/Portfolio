@@ -221,6 +221,24 @@ section.especialidades .flex {
     display: none;
 }
 
+.especialidades #website-box.zoom {
+    transform: translateX(400px) scale(1.5);
+    background-color: #232832;
+    z-index: 10001;
+}
+
+.especialidades #responsivo-box.zoom {
+    transform: scale(1.5);
+    background-color: #232832;
+    z-index: 10001;
+}
+
+.especialidades #linguagens-box.zoom {
+    transform: translateX(-400px) scale(1.5);
+    background-color: #232832;
+    z-index: 10001;
+}
+
 
 /* SOBRE MIM */
 
@@ -400,6 +418,24 @@ footer .logo-footer {
         flex-direction: column;
     }
 
+    .especialidades #website-box.zoom {
+        transform: scale(1);
+        background-color: #232832;
+        z-index: 10001;
+    }
+    
+    .especialidades #responsivo-box.zoom {
+        transform: scale(1);
+        background-color: #232832;
+        z-index: 10001;
+    }
+    
+    .especialidades #linguagens-box.zoom {
+        transform: scale(1.2);
+        background-color: #232832;
+        z-index: 10001;
+    }
+
 }
 
 @media screen and (max-width: 949px) {
@@ -453,6 +489,10 @@ footer .logo-footer {
         transition: .2s;
         margin-right: 40px;
         display: block;
+    }
+    
+    .menu-mobile.abrir-menu {
+        width: 70%;
     }
     
     .menu-mobile nav ul {
