@@ -3,16 +3,19 @@
 @font-face {
     font-family: "minhafonte";
     src: url(FontesMontserrat/Montserrat-Light.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: "fontetitulos";
     src: url(FontesMontserrat/Montserrat-ExtraBold.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: "fontenegrito";
     src: url(FontesMontserrat/Montserrat-Medium.ttf);
+    font-display: swap;
 }
 
 /* ESTILO GERAL */
@@ -157,7 +160,7 @@ section.topo-do-site .flex {
     height: 350px;
     border-radius: 50%;
     position: relative; /* A animação (keyframes) só vai funcionar se a position for diferente da static */
-    animation: flutuando 2s ease-in-out infinite alternate; /* ease-in-out serve para a imagem ela começar devagar, no meio ser rápida e no final devagar denovo, e o infinite pra a animação ser inifinita, e a alternate é pra ela subir e descer animado, pra não chegar até o 100% e trocar pro 0% direto, sem animar */
+    animation: flutuando 1.5s ease-in-out infinite alternate; /* ease-in-out serve para a imagem ela começar devagar, no meio ser rápida e no final devagar denovo, e o infinite pra a animação ser inifinita, e a alternate é pra ela subir e descer animado, pra não chegar até o 100% e trocar pro 0% direto, sem animar */
 }
 
 @keyframes flutuando {
@@ -216,24 +219,6 @@ section.especialidades .flex {
     height: 100%;
     z-index: 10000;
     display: none;
-}
-
-.especialidades #website-box.zoom {
-    transform: translateX(400px) scale(1.5);
-    background-color: #232832;
-    z-index: 10001;
-}
-
-.especialidades #responsivo-box.zoom {
-    transform: scale(1.5);
-    background-color: #232832;
-    z-index: 10001;
-}
-
-.especialidades #linguagens-box.zoom {
-    transform: translateX(-400px) scale(1.5);
-    background-color: #232832;
-    z-index: 10001;
 }
 
 
@@ -415,24 +400,6 @@ footer .logo-footer {
         flex-direction: column;
     }
 
-    .especialidades #website-box.zoom {
-        transform: scale(1);
-        background-color: #232832;
-        z-index: 10001;
-    }
-    
-    .especialidades #responsivo-box.zoom {
-        transform: scale(1);
-        background-color: #232832;
-        z-index: 10001;
-    }
-    
-    .especialidades #linguagens-box.zoom {
-        transform: scale(1.2);
-        background-color: #232832;
-        z-index: 10001;
-    }
-
 }
 
 @media screen and (max-width: 949px) {
@@ -486,10 +453,6 @@ footer .logo-footer {
         transition: .2s;
         margin-right: 40px;
         display: block;
-    }
-    
-    .menu-mobile.abrir-menu {
-        width: 70%;
     }
     
     .menu-mobile nav ul {
