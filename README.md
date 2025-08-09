@@ -1,4 +1,4 @@
-<h3 align="center">Portfolio Pessoal<br/><a href="https://murilloantoniobento.github.io/Portfolio/">murilloantoniobento.github.io/Portfolio</a></h3>
+<h3 align="center">Portfolio Pessoal<br/><a href="https://murilloantoniobento.github.io/Portfolio/">murilloantoniobento.github.io/Portfolio/</a></h3>
 
 #### Tecnologias
 
@@ -20,7 +20,7 @@
 ## Contatos
 
 <div> 
-<a href = "https://mail.google.com/mail/u/0/#inbox?compose=VpCqJZMhbVbQcWpvqQRzdXBMJpStCqWvbwZKZDRHDghgcgfGWFkFxgFmWgNhZwMPZgGmLpG"> <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+<a href = "mailto:murilloantoniobento@gmail.com"> <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
 <a href="https://www.linkedin.com/in/murillo-antonio-bento-178b20303/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"  target="_blank"></a> 
 </div>&nbsp;&nbsp;
 
