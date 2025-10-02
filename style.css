@@ -1,0 +1,710 @@
+/* FONTES */
+
+@font-face {
+    font-family: "minhafonte";
+    src: url(Fontes/Montserrat-Light.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "fontetitulos";
+    src: url(Fontes/Montserrat-ExtraBold.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "fontenegrito";
+    src: url(Fontes/Montserrat-Medium.ttf);
+    font-display: swap;
+}
+
+/* ESTILO GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: #232832;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.titulo {
+    color: #fffff0;
+    font-size: 38px;
+    text-align: center;
+    font-family: fontetitulos;
+}
+
+.titulo span {
+    color: #8a6bbe;
+}
+
+.curriculo button:hover {
+    box-shadow: 0px 0px 8px #fffff0;
+    transform: scale(1.05);
+}
+
+.social button:hover {
+    box-shadow: 0px 0px 8px #8a6bbe;
+    transform: scale(1.05);
+}
+
+/* MENU */
+
+header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: saturate(180%) blur(20px); /* Efeito de blur */
+    padding: 1rem;
+    position: fixed;
+    z-index: 1;
+}
+
+header .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pra dar um espaço entre a logo MURILLO e os itens do menu */
+    font-family: fontenegrito;
+}
+
+header .interface .menu a {
+    color: #5c5c5c;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+header .interface .menu a:hover {
+    color: #fffff0;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none; 
+}
+
+header nav.menu ul {
+    display: flex;
+    gap: 80px;
+}
+
+.curriculo button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    font-family: fontetitulos;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #232832;
+    background-color: #fffff0;
+    border: none;
+    border-radius: 45px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.logo a {
+    color: #8a6bbe;
+    font-family: fontetitulos;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* MENU MOBILE */
+
+.menu-mobile {
+    display: none;
+}
+
+.btn-abrir-menu i {
+    display: none;
+}
+
+/* TOPO DO SITE */
+
+.topo-do-site {
+    padding: 40px 4%; /* Este 4% é utilizado para quando a tela for menor, os textos não ficarem colando nas laterais */
+    padding-top: 200px;
+}
+
+.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.topo-do-site .txt-topo-site h1 {
+    color: #fffff0;
+    font-family: fontetitulos;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site p {
+    color: #fffff0;
+    margin: 40px 0;
+    font-family: minhafonte;
+}
+
+.topo-do-site .img-topo-site img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    position: relative; /* A animação (keyframes) só vai funcionar se a position for diferente da static */
+    animation: flutuando 1.5s ease-in-out infinite alternate; /* ease-in-out serve para a imagem ela começar devagar, no meio ser rápida e no final devagar denovo, e o infinite pra a animação ser inifinita, e a alternate é pra ela subir e descer animado, pra não chegar até o 100% e trocar pro 0% direto, sem animar */
+}
+
+@keyframes flutuando {
+    0% {
+        top: 0; /* A distância do topo vai ser 0 */
+    }
+    100% {
+        top: 30px;
+    }
+}
+
+/* ESPECIALIDADES */
+
+.especialidades {
+    padding: 100px 4%; /* Este 4% é utilizado para quando a tela for menor, os textos não ficarem colando nas laterais */
+}
+
+.especialidades .flex {
+    gap: 80px;
+}
+
+.especialidades-box {
+    color: #fffff0; 
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+
+.especialidades-box i {
+    font-size: 70px;
+    color: #8a6bbe;
+}
+
+.especialidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+    font-family: fontetitulos;
+}
+
+.especialidades-box p {
+    font-family: minhafonte;
+}
+
+.especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #fffff0;
+}
+
+/* SOBRE MIM */
+
+.sobremim .img-sobre img {
+    height: 350px;
+    width: 350px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.sobremim {
+    padding: 80px 4%; /* Este 4% é utilizado para quando a tela for menor, os textos não ficarem colando nas laterais */
+}
+
+.sobremim .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobremim .txt-sobre {
+    color: #fffff0;
+}
+
+.sobremim .txt-sobre h2 {
+    font-family: fontetitulos;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.sobremim .txt-sobre h2 span {
+    color: #8a6bbe;
+    display: block;
+}
+
+.sobremim .txt-sobre p {
+    margin: 20px 0;
+    font-family: minhafonte;
+    text-align: justify; /* Texto justificado */
+}
+
+.sobremim .txt-sobre #cidade {
+    font-family: fontenegrito;
+}
+
+.social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Fica um circulo perfeito */
+    border: none;
+    background-color: #8a6bbe;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: .2s;
+}
+
+/* PROJETOS */
+
+.projeto-linha {
+    display: flex;
+    gap: 200px;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0;
+    flex-wrap: wrap;
+}
+
+.projeto-linha.reverse{
+    flex-direction: row-reverse;
+}
+
+.projeto-linha.reverse .projeto-texto {
+    text-align: right;
+}
+
+.projeto-linha.reverse .projeto-texto p, .projeto-linha .projeto-texto p {
+    line-height: 20px;
+}
+
+.projeto-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.img-projeto {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+}
+
+.projeto-texto {
+    max-width: 500px;
+    font-family: minhafonte;
+    color: #fffff0;
+    transform: translateX(-200px);
+}
+
+.projeto-texto.reverse {
+    transform: translateX(200px);
+}
+
+.projeto-texto h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.projeto-texto p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.overlay {
+    position: absolute; /* agora a minha classe overlay só vai trabalhar dentro da minha classe img-projetos, por causa do position: relative; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: fontenegrito;
+    color: #fffff0;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.botoes-projeto {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.botoes-projeto.reverse {
+    flex-direction: row-reverse;
+}
+
+.btn-projeto {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: minhafonte;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #ffffffa1;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.btn-projeto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  transition: .4s ease-in-out;
+}
+
+.btn-projeto:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.btn-projeto:hover {
+  border-color: #fff;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 10px 10px #ffffff1d;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+.line-footer p i {
+    color: #8a6bbe;
+    font-size: 20px;
+}
+
+.line-footer p a {
+    color: #fffff0;
+    font-family: minhafonte;
+    font-size: 20px;
+}
+
+.logo-footer {
+    color: #8a6bbe;
+    font-family: fontetitulos;
+    align-items: center;
+    font-size: 30px;
+}
+
+/* DESIGN RESPONSIVO */ 
+
+@media screen and (max-width: 1280px) {
+    .projeto-linha {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .projeto-linha.reverse {
+        flex-direction: column;
+    }
+
+    .projeto-linha .projeto-texto {
+        transform: translateX(0);
+        max-width: 50%;
+        margin-top: 20px; /* Dá espaço entre imagem e texto */
+    }
+
+    .projeto-linha .projeto-texto h3 {
+        text-align: center;
+    }
+
+    .projeto-linha .projeto-texto p{
+        text-align: justify;
+    }
+
+    .botoes-projeto {
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 1143px) {
+    
+    /* o topo começa a quebrar, colocamos em coluna */
+
+    .topo-do-site .flex {
+        flex-direction: column-reverse;
+    }
+
+}
+
+@media screen and (max-width: 1120px) {
+    
+    /* as especialidades começa a quebrar */
+
+    .especialidades .flex {
+        flex-direction: column;
+    }
+
+    .especialidades-box {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+}
+
+@media screen and (max-width: 949px) {
+    
+    /* O sobre mim começa a quebrar */
+
+    .sobremim .flex {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    /* Projetos, Menu Mobile, centralizar botão de currículo, remove botão de currículo do menu e remove os botões do footer */
+
+    .projeto-linha .projeto-texto {
+        max-width: 60%;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .btn-abrir-menu i {
+        display: block;
+        color: #5c5c5c;
+        font-size: 40px;
+        cursor: pointer;
+        transition: .2s;
+        margin-right: 30px;
+    }
+    
+    .btn-abrir-menu i:hover {
+        color: #fffff0;
+    }
+    
+    .menu-mobile {
+        background-color: rgba(0, 0, 0, 0.7);
+        backdrop-filter: saturate(180%) blur(20px);
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 0%;
+        overflow: hidden;
+        transition: .2s;
+        display: block;
+    }
+    
+    .menu-mobile.abrir-menu {
+        width: 70%;
+    }
+    
+    .menu-mobile nav ul {
+        text-align: right;
+    }
+    
+    .menu-mobile nav ul li a {
+        color: #5c5c5c;
+        font-size: 20px;
+        font-weight: 300;
+        font-family: fontenegrito;
+        padding: 20px 4%;
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+        transition: .2s;
+    }
+    
+    .menu-mobile .btn-fechar {
+        color: #8a6bbe;
+        font-size: 30px;
+        padding: 20px 5%;
+        cursor: pointer;
+    }
+    
+    .menu-mobile nav ul li a:hover {
+        color: #fffff0;
+    }
+
+    header .curriculo button {
+        display: none;
+    }
+
+    .txt-topo-site .curriculo {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .social {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 700px) {
+    
+    /* Projetos */
+
+    .projeto-linha .projeto-texto {
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .projeto-linha .projeto-texto {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    
+    .projeto-box img {
+        width: 90%;
+    }
+    
+    .overlay {
+        display: none;
+    }
+
+    .projeto-box {
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (max-width: 420px) {
+    
+    /* Diminui o tamanho da foto, tamanho da fonte do título das habilidades, o tamanho da foto do sobre mim*/
+
+    .topo-do-site .img-topo-site img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .especialidades .interface h2 {
+        font-size: 35px;
+    }
+
+    .img-projetos {
+        width: 320px;
+        height: 420px;
+    }
+
+    .sobremim .img-sobre img {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+
+    /* Footer quebra */
+
+    footer {
+        display: none;
+    }
+   
+}
+
+@media screen and (max-width: 350px) {
+
+    /* Título do topo do site quebra */
+
+    .especialidades-box h3 {
+        font-size: 24px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .topo-do-site .txt-topo-site p {
+        display: none;
+    }
+
+    #baixar-curriculo {
+        margin-top: 50px;
+    }
+
+    .topo-do-site .txt-topo-site h1 {
+        text-align: center;
+    }
+
+    .txt-sobre p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 312px) {
+    .img-sobre img {
+        display: none;
+    }
+
+    .topo-do-site .img-topo-site {
+        display: flex;
+        justify-content: center;
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 80%;
+        height: 80%;
+    }
+
+    .especialidades .especialidades-box p {
+        display: none;
+    }
+
+    .especialidades .especialidades-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+
+}
